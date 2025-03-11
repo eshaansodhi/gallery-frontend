@@ -6,12 +6,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/carousel.css";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const ImageCarousel = ({ onFinish }) => {
   const [images, setImages] = useState([]);
   const sliderRef = useRef(null); // Ref for controlling the slider
 
   useEffect(() => {
-    axios.get("https://gallery-backend-kqyd.onrender.com/api/images")
+    axios.get(`${API_URL}/api/images`)
       .then((response) => setImages(response.data))
       .catch((error) => console.error("Error fetching images:", error));
   }, []);
