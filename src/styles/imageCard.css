@@ -1,0 +1,62 @@
+.image-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Allow flexibility */
+    max-width: 300px; /* Keeps a reasonable size */
+    margin: auto; /* Center the card */
+  }
+  
+  /* Add hover effect for larger screens only */
+  @media (min-width: 768px) {
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Mobile-friendly layout */
+  @media (max-width: 600px) {
+    .image-card {
+      max-width: 90%; /* Use most of the screen width */
+      padding: 10px; /* Reduce padding for better spacing */
+    }
+  }
+  
+  /* Photo Frame Styling */
+  .photo-frame {
+    border: 8px solid white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 100%; /* Make sure it adapts to different sizes */
+  }
+  
+  /* Image Styling */
+  .instant-photo {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Caption Styling */
+  .image-caption {
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Adjust font size on smaller screens */
+  @media (max-width: 480px) {
+    .image-caption {
+      font-size: 0.9rem; /* Slightly smaller text */
+    }
+  }
+  

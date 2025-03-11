@@ -1,0 +1,61 @@
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px; /* Prevent images from touching the edge */
+}
+
+/* Center slides properly */
+.slick-slider {
+    width: 100%;
+    max-width: 330px; /* Matches image card width */
+}
+
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+.slide-img {
+    width: 100%; /* Ensure images scale properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+/* Custom Arrows */
+.custom-arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 10px 10px;
+}
+
+/* Ensure arrows are placed below the image */
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 95vw; /* Take more screen space on smaller devices */
+    }
+
+    .slide-img {
+        border-radius: 10px; /* Smaller border-radius for compact look */
+    }
+
+    .arrow-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .custom-arrow {
+        font-size: 1.8rem; /* Slightly smaller arrows */
+    }
+}
